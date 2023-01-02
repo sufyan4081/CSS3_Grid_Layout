@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            background-color: rgb(228, 240, 255);
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns:[fc-s] 25% [fc-e sc-s] 50% [sc-e tc-s] 25% [tc-e];
+            grid-template-rows:[Holy-s] 20% [Holy-e Nav-s Main-s Sidebar-s] 60% [Nav-e Main-e Sidebar-e Footer-s] 20% [Footer-e];
+            grid-gap: 12px;
+            color: white;
+        }
+        .Holy{
+            background-color: rgb(0, 105, 255);
+            grid-area: Holy-s/fc-s/Holy-e/tc-e;
+        }
+        .Nav{
+            background-color: rgb(103, 164, 255);
+            grid-area: Nav-s/fc-s/Nav-e/fc-e;
+        }
+        .Main{
+            background-color: rgb(165, 166, 171);
+            grid-area: Main-s/sc-s/Main-e/sc-e;
+        }
+        .Sidebar{
+            background-color: rgb(103, 164, 255);
+            grid-area: Sidebar-s/tc-s/Sidebar-e/tc-e;
+        }
+        .Footer{
+            background-color: rgb(0, 105, 255);
+            grid-area: Footer-s/fc-s/Footer-e/tc-e;
+        }
+        .container div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Holy">Holy Grail Layout</div>
+        <div class="Nav">Nav</div>
+        <div class="Main">Main Content</div>
+        <div class="Sidebar">Sidebar</div>
+        <div class="Footer">Footer</div>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: antiquewhite;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: [fc-s] 1fr [fc-e sc-s] 3fr [sc-e];
+            grid-template-rows: [hr-s] 1fr [hr-e nr-s sr-s] 1fr [nr-e ar-s] 5fr [ar-e sr-e fr-s] 1fr [fr-e];
+        }
+
+        div {
+            border-radius: 10px;
+        }
+
+        .header {
+            background-color: rgba(234, 210, 32, 0.842);
+            grid-column: fc-s/sc-e;
+            grid-row: hr-s/hr-e;
+        }
+
+        .sidebar {
+            background-color: orangered;
+            grid-column: fc-s/fc-e;
+            grid-row: sr-s/sr-e;
+        }
+
+        .nav {
+            background-color: aqua;
+            grid-column: sc-s/sc-e;
+            grid-row: nr-s/nr-e;
+        }
+
+        .article {
+            background-color: grey;
+            grid-column: sc-s/sc-e;
+            grid-row: ar-s/ar-e;
+        }
+
+        .footer {
+            background-color: black;
+            grid-column: fc-s/sc-e;
+            grid-row: fr-s/fr-e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="nav">Nav</div>
+        <div class="article">Article</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html> -->

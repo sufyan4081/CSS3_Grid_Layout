@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            /* background-color: aliceblue; */
+            height: 600px;
+            width: 600px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 50px 1fr 150px 50px;
+            margin: 10px;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+        }
+        .container div{
+            background-color: blue;
+            border: 3px solid red;
+            
+        }
+        .Header{
+            /* grid-column + grid-row */
+            grid-area: 1/1/1/-1;    
+        }
+        .Menu{
+            grid-area: 2/1/2/1;
+        }
+        .Main{
+            grid-area: 2/2/4/3;
+        }
+        .Ad1{
+            grid-area: 2/3/4/-1;
+        }
+        .Ad2{
+            grid-area: 3/1/3/1;
+        }
+        .Footer{
+            grid-area: 4/1/4/-1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">Header</div>
+        <div class="Menu">Menu</div>
+        <div class="Main">Main</div>
+        <div class="Ad1">Ad1</div>
+        <div class="Ad2">Ad2</div>
+        <div class="Footer">Footer</div>
+    </div>
+</body>
+</html>

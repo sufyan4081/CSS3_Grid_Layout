@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            display: grid;
+            grid-gap: 15px;
+            width: 700px;
+            height: 550px;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 1fr 5fr 1fr;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            margin: 10px;
+            
+        }
+        .container div{
+            border-radius: 5px;
+        }
+        .Header{
+            background-color: rgb(255, 222, 34);
+            grid-column: 1/-1;
+        }
+        .Sidebar{
+            background-color: rgb(255, 119, 84);
+            grid-row: 2/4;
+        }
+        .Nav{
+            background-color: rgb(0, 221, 255);
+        }
+        .Article{
+            background-color: rgb(188, 203, 222);
+            grid-column: 2/-1;
+        }
+        .Footer{
+            background-color: rgb(57, 63, 77);
+            grid-column: 1/-1;
+        }
+        #article-para{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">Header</div>
+        <div class="Sidebar">Sidebar</div>
+        <div class="Nav">Nav</div>
+        <div class="Article">
+            <p>Article</p>
+            <p id="article-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eum, aperiam possimus id odit vel voluptatum dolorum, ullam alias, blanditiis cum ea quae officia quo! Quae quis modi sit aliquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, non Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit iste velit placeat unde non porro numquam minus nobis laboriosam? Quaerat, voluptas impedit? Ipsam et cumque beatae dolores sequi veritatis Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, dignissimos iusto nobis eveniet perspiciatis inventore veniam quisquam fugiat similique distinctio, tempora voluptatem quo in officia impedit iure sunt debitis incidunt aut. Officia praesentium ipsam sequi. Doloremque amet vel modi suscipit itaque mollitia blanditiis officiis nam aperiam deserunt. Praesentium, ipsam! Maxime praesentium inventore molestiae tempora perspiciatis autem expedita voluptatibus!</p>
+        </div>
+        <div class="Footer">Footer</div>
+      </div>
+</body>
+</html>
